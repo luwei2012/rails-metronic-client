@@ -14,9 +14,7 @@ public class Const {
 	public static LatLng test_latlng;
 
 	// 服务器路径
-	public static final String SERVER_BASE_PATH = "http://121.41.41.2";// 服务器根目录
-//	public static final String SERVER_BASE_PATH = "http://work.yuyaa.com";// 服务器根目录 
-//	public static final String SERVER_BASE_PATH = "http://192.168.0.102:3000";
+	public static final String SERVER_BASE_PATH = "http://192.168.0.102:3000";// 服务器根目录
 	
 	public static final String DOWNLOAD = "/apk/aWashCar.apk";// 服务器根目录
 	public static final String REGISTER = "/mobile/register";// 注册地址
