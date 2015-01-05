@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@color/activity_title" >
+
+        <ImageView
+            android:id="@+id/btn_change_psw_activity_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_title_bar"
+            android:background="@drawable/btn_back_normal"
+            android:onClick="clickCallback" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/change_psw"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/text_size_title_bar_title" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/preference_first_item"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/edit_change_psw_activity_original_psw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/selector_edit_persional"
+            android:hint="@string/original_psw"
+            android:inputType="textPassword"
+            android:textSize="@dimen/text_size_login_hint" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/preference_item"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/edit_change_psw_activity_new_psw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/selector_edit_persional"
+            android:hint="@string/new_psw"
+            android:inputType="textPassword"
+            android:textSize="@dimen/text_size_login_hint" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/preference_last_item"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/edit_change_psw_activity_new_psw_again"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/selector_edit_persional"
+            android:hint="@string/new_psw_again"
+            android:inputType="textPassword"
+            android:textSize="@dimen/text_size_login_hint" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_change_psw_activity_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/selector_btn_personal_info_logout"
+        android:onClick="clickCallback"
+        android:padding="10dp"
+        android:text="@string/change_psw"
+        android:textColor="@color/font_white"
+        android:textSize="@dimen/text_size_title_bar_title" />
+
+</LinearLayout>

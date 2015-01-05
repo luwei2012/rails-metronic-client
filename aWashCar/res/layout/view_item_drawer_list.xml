@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@drawable/selector_drawer_list_item" >
+    
+    <ImageView 
+        android:id="@+id/img_drawer_list_item_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/drawer_margin_left" />
+
+    <TextView
+        android:id="@+id/text_drawer_list_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/drawer_list_item_height"
+        android:layout_marginLeft="@dimen/drawer_margin_left"
+        android:gravity="center_vertical"
+        android:textColor="@drawable/selector_drawer_list_text_color"
+        android:textSize="@dimen/drawer_list_item_text_size" />
+
+    <!--
+         <TextView
+        android:id="@+id/text_drawer_list_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/activatedBackgroundIndicator"
+        android:gravity="center_vertical"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        android:textColor="#fff" />
+    -->
+
+</LinearLayout>

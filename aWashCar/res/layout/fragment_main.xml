@@ -1,0 +1,184 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/btn_main_brand_service"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/split"
+        android:layout_centerHorizontal="true"
+        android:text="@string/brand_service"
+        android:textColor="@color/font_white"
+        android:textSize="@dimen/main_btn_text_size" />
+
+    <ImageView
+        android:id="@+id/split"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@+id/btn_main_order_service"
+        android:src="@drawable/line_gradient" />
+
+    <Button
+        android:id="@+id/btn_main_order_service"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/order_service"
+        android:textColor="@color/font_white"
+        android:textSize="@dimen/main_btn_text_size" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_main_brand_service"
+        android:background="@drawable/bg_mainfragment" >
+
+        <LinearLayout
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="#88aaaaaa"
+            android:baselineAligned="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/temperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25"
+                    android:textColor="#52514d"
+                    android:textSize="65sp" />
+
+                <TextView
+                    android:id="@+id/symbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/temperature"
+                    android:layout_toRightOf="@+id/temperature"
+                    android:paddingTop="5dp"
+                    android:text="℃"
+                    android:textColor="#52514d"
+                    android:textSize="38sp" />
+
+                <RelativeLayout
+                    android:id="@+id/weather_info_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/symbol" >
+
+                    <TextView
+                        android:id="@+id/city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="成 都"
+                        android:textColor="#52514d"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/weather_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/city"
+                        android:layout_marginTop="3dp"
+                        android:text="多云"
+                        android:textColor="#52514d"
+                        android:textSize="24sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/traffic_control_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:ems="1"
+                    android:lineSpacingMultiplier="0.8"
+                    android:paddingBottom="1dp"
+                    android:text="今日限行"
+                    android:textColor="#52514d"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/number_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/traffic_control_info" >
+
+                    <TextView
+                        android:id="@+id/car_number_0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="5"
+                        android:textColor="#52514d"
+                        android:textSize="70sp" />
+
+                    <ImageView
+                        android:id="@+id/number_split"
+                        android:layout_width="wrap_content"
+                        android:layout_height="56dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/car_number_0"
+                        android:paddingTop="2dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/number_split" />
+
+                    <TextView
+                        android:id="@+id/car_number_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/number_split"
+                        android:text="0"
+                        android:textColor="#52514d"
+                        android:textSize="70sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/empty_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/traffic_control_info"
+                    android:text="无限制"
+                    android:textColor="#52514d"
+                    android:textSize="30sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/main_fragment_shake_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/message"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/img_shake" />
+    </RelativeLayout>
+
+</RelativeLayout>

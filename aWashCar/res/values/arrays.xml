@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="main_drawer_list_titles">
+        <item>主页</item>
+        <item>个人信息</item>
+        <item>我的订单</item>
+        <item>我的收藏</item>
+        <item>分享软件</item>
+        <item>关于我们</item> 
+    </array>
+    <array name="main_drawer_list_icons">
+        <item>@drawable/selector_drawer_list_item_home_icon</item>
+        <item>@drawable/selector_drawer_list_item_personal_icon</item>
+        <item>@drawable/selector_drawer_list_item_order_icon</item>
+        <item>@drawable/selector_drawer_list_item_favourite_icon</item>
+        <item>@drawable/selector_drawer_list_item_share_icon</item>
+        <item>@drawable/selector_drawer_list_item_aboutus_icon</item>
+    </array>
+    
+</resources>

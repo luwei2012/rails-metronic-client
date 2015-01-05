@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"  >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_car" />
+
+        <RelativeLayout
+            android:id="@+id/text_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/image" >
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥89"
+                android:textColor="#FF0000"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/price"
+                android:layout_below="@id/price"
+                android:layout_marginTop="10dp"
+                android:text="剩余预约量："
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/left_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/left"
+                android:layout_toRightOf="@id/left"
+                android:text="21"
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/chose_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/left"
+                android:layout_below="@id/left"
+                android:layout_marginTop="10dp"
+                android:hint="请选择时间"
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/close_button"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:clickable="true"
+            android:src="@drawable/login_close" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:id="@+id/confirm"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/msp_submit_main_normal"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom"
+        android:layout_below="@id/title"
+        android:background="#eeeeee" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="15dp" >
+
+            <LinearLayout
+                android:id="@+id/ji_fen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="需要积分:"
+                        android:textColor="@color/font_gray"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/need_ji_fen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:textColor="@color/font_gray"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="当前剩余积分:"
+                        android:textColor="@color/font_gray"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/left_ji_fen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="25"
+                        android:textColor="@color/font_gray"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/gray_divider" />
+
+            <TextView
+                android:id="@+id/car_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="服务内容"
+                android:textColor="@color/font_gray"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/gray_divider" />
+
+            <com.yuyaa.awashcar.view.NestGridView
+                android:id="@+id/type_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:cacheColorHint="@null"
+                android:clickable="false"
+                android:columnWidth="80dp"
+                android:focusable="false"
+                android:gravity="left"
+                android:horizontalSpacing="10dp"
+                android:listSelector="#00000000"
+                android:numColumns="auto_fit"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dp" >
+            </com.yuyaa.awashcar.view.NestGridView>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray_divider" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="选择时间"
+                android:textColor="@color/font_gray"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/gray_divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioGroup
+                        android:id="@+id/time_zone_index"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:checkedButton="@+id/rb_filter_date_day_0"
+                        android:orientation="vertical" >
+
+                        <RadioButton
+                            android:id="@+id/rb_filter_date_day_0"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:button="@null"
+                            android:drawableBottom="@drawable/selector_line_radio_button"
+                            android:gravity="center"
+                            android:onClick="clickCallback"
+                            android:text="今日"
+                            android:textColor="@color/font_gray"
+                            android:textSize="16sp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_filter_date_day_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:button="@null"
+                            android:drawableBottom="@drawable/selector_line_radio_button"
+                            android:gravity="center"
+                            android:onClick="clickCallback"
+                            android:text="明日"
+                            android:textColor="@color/font_gray"
+                            android:textSize="16sp" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical" >
+
+                            <CheckBox
+                                android:id="@+id/cb_clock_popupwindow_select_time_0"
+                                style="@style/MyCheckBoxStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="39dp"
+                                android:layout_marginLeft="10dp"
+                                android:onClick="clickCallback"
+                                android:paddingLeft="20dp"
+                                android:text="09:00-10:00" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@drawable/img_divider_gray" />
+
+                            <CheckBox
+                                android:id="@+id/cb_clock_popupwindow_select_time_2"
+                                style="@style/MyCheckBoxStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="39dp"
+                                android:layout_marginLeft="10dp"
+                                android:onClick="clickCallback"
+                                android:paddingLeft="20dp"
+                                android:text="11:00-12:00" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@drawable/img_divider_gray" />
+
+                            <CheckBox
+                                android:id="@+id/cb_clock_popupwindow_select_time_4"
+                                style="@style/MyCheckBoxStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="39dp"
+                                android:layout_marginLeft="10dp"
+                                android:onClick="clickCallback"
+                                android:paddingLeft="20dp"
+                                android:text="13:00-14:00" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@drawable/img_divider_gray" />
+
+                            <CheckBox
+                                android:id="@+id/cb_clock_popupwindow_select_time_6"
+                                style="@style/MyCheckBoxStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="39dp"
+                                android:layout_marginLeft="10dp"
+                                android:onClick="clickCallback"
+                                android:paddingLeft="20dp"
+                                android:text="15:00-16:00" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@drawable/img_divider_gray" />
+
+                            <CheckBox
+                                android:id="@+id/cb_clock_popupwindow_select_time_8"
+                                style="@style/MyCheckBoxStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="10dp"
+                                android:onClick="clickCallback"
+                                android:paddingLeft="20dp"
+                                android:text="17:00-18:00" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical" >
+
+                            <CheckBox
+                                android:id="@+id/cb_clock_popupwindow_select_time_1"
+                                style="@style/MyCheckBoxStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="39dp"
+                                android:layout_marginLeft="10dp"
+                                android:onClick="clickCallback"
+                                android:paddingLeft="20dp"
+                                android:text="10:00-11:00" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@drawable/img_divider_gray" />
+
+                            <CheckBox
+                                android:id="@+id/cb_clock_popupwindow_select_time_3"
+                                style="@style/MyCheckBoxStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="39dp"
+                                android:layout_marginLeft="10dp"
+                                android:onClick="clickCallback"
+                                android:paddingLeft="20dp"
+                                android:text="12:00-13:00" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@drawable/img_divider_gray" />
+
+                            <CheckBox
+                                android:id="@+id/cb_clock_popupwindow_select_time_5"
+                                style="@style/MyCheckBoxStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="39dp"
+                                android:layout_marginLeft="10dp"
+                                android:onClick="clickCallback"
+                                android:paddingLeft="20dp"
+                                android:text="14:00-15:00" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@drawable/img_divider_gray" />
+
+                            <CheckBox
+                                android:id="@+id/cb_clock_popupwindow_select_time_7"
+                                style="@style/MyCheckBoxStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="39dp"
+                                android:layout_marginLeft="10dp"
+                                android:onClick="clickCallback"
+                                android:paddingLeft="20dp"
+                                android:text="16:00-17:00" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@drawable/img_divider_gray" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/condition_price_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/white" >
+        
+        <RadioButton 
+            style="@style/MyRadioButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="无限制" />
+
+        <RadioButton
+            style="@style/MyRadioButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="0元" />
+
+        <RadioButton
+            style="@style/MyRadioButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="20元以下" />
+
+        <RadioButton
+            style="@style/MyRadioButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="20元~50元" />
+
+        <RadioButton
+            style="@style/MyRadioButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="50元~80元" />
+
+        <RadioButton
+            style="@style/MyRadioButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="80元以上" />
+    </RadioGroup>
+
+</LinearLayout>

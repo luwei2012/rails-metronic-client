@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="font_black">#ff000000</color>
+    <color name="font_gray">#ff808080</color>
+    <color name="font_pink">#ffff50a2</color>
+    <color name="font_white">#ffffffff</color>
+    <color name="font_gold">#b89766</color>
+    <color name="font_blue">#0A549E</color>
+    <color name="font_red">#ff3030</color>
+    <color name="background_gray">#fff0f0f0</color>
+    <color name="list_bg_normal">#ffdce1e5</color>
+    <color name="list_bg_pressed">#ff0A549E</color>
+    <color name="alert_red">#990033</color>
+    <color name="pressed_red">#FF0033</color>
+    <color name="gray">#CCCCCC</color>
+    <color name="main_fragment_bg_color">#f0f0f0</color>
+    <color name="beige">#fbfaf8</color>
+    <color name="gray_divider">#cecece</color>
+    <color name="bg_color">#f5f3ed</color>   <!-- 245,243,237 -->
+    <color name="deep_yellow">#feaf2f</color>
+    <color name="light_gray">#efefef</color>
+    <color name="activity_title">#f5f3ef</color>
+</resources>

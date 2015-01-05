@@ -1,0 +1,52 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="drawer_list_item_height">60dp</dimen>
+    <dimen name="drawer_list_item_text_size">18sp</dimen>
+    <dimen name="drawer_margin_left">20dp</dimen>
+    <dimen name="main_btn_text_size">20sp</dimen>
+    <dimen name="main_btn_margin">20dp</dimen>
+    <dimen name="merchant_list_item_margin">10dp</dimen>
+    <dimen name="merchant_list_item_name_size">16sp</dimen>
+    <dimen name="merchant_list_item_address_size">12sp</dimen>
+    <dimen name="header_bar_margin">10dp</dimen>
+    <dimen name="margin_merchant_deatal_activity">10dp</dimen>
+    <dimen name="margin_popupwindow_select_time">5dp</dimen>
+    <dimen name="text_size_popupwindow_select_time">14sp</dimen>
+    <dimen name="text_size_popupwindow_select_time_btn_confirm">16sp</dimen>
+    <dimen name="text_size_title_bar_title">18sp</dimen>
+    <dimen name="margin_title_bar">0dp</dimen>
+    <dimen name="margin_brand_service_activity_operator_top">7dp</dimen>
+    <dimen name="margin_brand_service_activity_operator_left">25dp</dimen>
+    <dimen name="margin_brand_service_activity_gridview">5dp</dimen>
+    <dimen name="padding_brand_service_activity_gridview">5dp</dimen>
+    <dimen name="text_size_order_service_activity_filter">16sp</dimen>
+    <dimen name="text_size_login_hint">16sp</dimen>
+    <dimen name="margin_map_search_activity_filter_btn">10dp</dimen>
+    <dimen name="margin_brand_detail_activity_top">5dp</dimen>
+    <dimen name="title_bar_height">50dp</dimen>
+    <dimen name="width_btn_back">40dp</dimen>
+    <dimen name="width_height_filter_btn">36dp</dimen>
+    <dimen name="margin_map_search_activity">5dp</dimen>
+    <dimen name="height_btn">40dp</dimen>
+    <dimen name="margin_shake_popup_item">5dp</dimen>
+    <dimen name="margin_shake_popup_item_right">10dp</dimen>
+    <dimen name="margin_merchant_detail_star">3dp</dimen>
+    <dimen name="margin_btn_filter">5dp</dimen>
+    <dimen name="margin_item_vertical_regiter">20dp</dimen>
+    <dimen name="margin_divider_top_bottom">5dp</dimen>
+    <dimen name="padding_white_strip">3dp</dimen>
+    <dimen name="margin_white_strip_negative">-1dp</dimen>
+    <dimen name="text_size_personal_info_general">16sp</dimen>
+    <dimen name="margin_order_detail_strip_item">10dp</dimen>
+    <dimen name="text_size_order_detail_general">18sp</dimen>
+    <dimen name="text_size_service_type_activity_label">16sp</dimen>
+    <dimen name="padding_service_type_activity_label">5dp</dimen>
+    <dimen name="margin_service_type_activity_label">5dp</dimen>
+    <dimen name="page_margin">15dp</dimen>
+    <dimen name="dot_size">10dp</dimen>
+    <dimen name="dot_padding">2dp</dimen>
+
+</resources>

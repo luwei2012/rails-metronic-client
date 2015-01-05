@@ -1,0 +1,1 @@
+package com.yuyaa.awashcar.interfaces;import android.view.View;public interface XmlClickEvent {	void xmlClickMethod(View v);}

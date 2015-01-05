@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@color/activity_title" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="品牌列表"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/text_size_title_bar_title" />
+
+        <ImageView
+            android:id="@+id/btn_brands_activity_back"
+            android:layout_width="@dimen/width_btn_back"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:onClick="clickCallback"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_back_normal" />
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshGridView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/gridview_brands_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/font_white"
+        android:cacheColorHint="@android:color/transparent"
+        android:gravity="center_horizontal"
+        android:horizontalSpacing="@dimen/padding_brand_service_activity_gridview"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="2"
+        android:padding="3dp"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="@dimen/padding_brand_service_activity_gridview"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrHeaderBackground="@android:color/white"
+        ptr:ptrHeaderTextColor="@android:color/black" />
+
+</LinearLayout>

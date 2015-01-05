@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/conditon_car_type_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/font_white" >
+
+        <RadioButton
+            style="@style/MyRadioButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="小型车（5座以内）" />
+
+        <RadioButton
+            style="@style/MyRadioButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="大型车（7座及SUV）" />
+    </RadioGroup>
+
+</LinearLayout>

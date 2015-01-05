@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/layout_main_activity_header_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@color/activity_title" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:text="忘记密码"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/text_size_title_bar_title" />
+
+        <ImageView
+            android:id="@+id/btn_merchant_detail_activity_back"
+            android:layout_width="@dimen/title_bar_height"
+            android:layout_height="@dimen/title_bar_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:onClick="clickCallback"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_back_normal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_main_activity_header_bar"
+        android:background="@drawable/bg_personal_info_top"
+        android:paddingBottom="10dp" >
+
+        <ImageView
+            android:id="@+id/img_personal_info_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/img_personal_info_avatar" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/forget_notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/inputEmailAddress"
+        android:textSize="16sp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/forget_email"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/forget_notice"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="@string/emailAddress"
+        android:inputType="textEmailAddress" />
+
+    <Button
+        android:id="@+id/forget_btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/forget_email"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/selector_btn_personal_info_logout"
+        android:onClick="forgetListener"
+        android:padding="10dp"
+        android:text="@string/sendRequest"
+        android:textColor="@color/font_white"
+        android:textSize="16sp" />
+
+</RelativeLayout>

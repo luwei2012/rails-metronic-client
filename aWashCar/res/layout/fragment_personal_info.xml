@@ -1,0 +1,212 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_personal_info_top"
+        android:paddingBottom="10dp" >
+
+        <ImageView
+            android:id="@+id/img_personal_info_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/img_personal_info_avatar" />
+
+        <TextView
+            android:id="@+id/text_personal_info_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_personal_info_avatar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="张三"
+            android:textColor="@color/font_black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/text_personal_info_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_personal_info_nickname"
+            android:layout_centerHorizontal="true"
+            android:text="18912345678"
+            android:textColor="@color/font_black"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_personal_info_complete_info"
+        android:layout_below="@+id/title"
+        android:scrollbarStyle="outsideOverlay" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/preference_first_item"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/license_plate_number"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/text_size_personal_info_general" />
+
+                <TextView
+                    android:id="@+id/text_personal_info_car_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="111111"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/text_size_personal_info_general" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_white_strip_negative"
+                android:background="@drawable/preference_last_item"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/model"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/text_size_personal_info_general" />
+
+                <TextView
+                    android:id="@+id/text_personal_info_car_model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="小型车"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/text_size_personal_info_general" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/preference_single_item"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="15dp" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/points"
+                        android:textColor="@color/font_black"
+                        android:textSize="@dimen/text_size_personal_info_general" />
+
+                    <TextView
+                        android:id="@+id/text_personal_info_points"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="68"
+                        android:textColor="@color/font_black"
+                        android:textSize="@dimen/text_size_personal_info_general" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/text_personal_info_points_desciption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="积分超过60分，可兑换￥20洗车劵一张！"
+                    android:textColor="@color/font_gray" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_personal_info_reward_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:text="完善个人信息赠送积分！"
+                android:textColor="@color/font_black"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_personal_info_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/selector_btn_personal_info_logout"
+        android:gravity="center"
+        android:onClick="clickCallback"
+        android:padding="10dp"
+        android:text="@string/logout"
+        android:textColor="@color/font_white"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_personal_info_modify_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_personal_info_logout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/selector_btn_personal_info_logout"
+        android:gravity="center"
+        android:onClick="clickCallback"
+        android:padding="10dp"
+        android:text="修改密码"
+        android:textColor="@color/font_white"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_personal_info_complete_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_personal_info_modify_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/selector_btn_personal_info_logout"
+        android:gravity="center"
+        android:onClick="clickCallback"
+        android:padding="10dp"
+        android:text="@string/complete_personal_info"
+        android:textColor="@color/font_white"
+        android:textSize="16sp" />
+
+</RelativeLayout>

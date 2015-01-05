@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:id="@+id/time_zone_index"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@color/light_gray"
+            android:checkedButton="@+id/rb_filter_date_day_0"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/rb_filter_date_day_0"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/selector_bg_filter_time_date"
+                android:button="@null"
+                android:gravity="center"
+                android:onClick="clickCallback"
+                android:text="今日"
+                android:textColor="@color/font_black"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/rb_filter_date_day_1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/selector_bg_filter_time_date"
+                android:button="@null"
+                android:gravity="center"
+                android:onClick="clickCallback"
+                android:text="明日"
+                android:textColor="@color/font_black"
+                android:textSize="16sp" />
+        </RadioGroup>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/white" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <CheckBox
+                            android:id="@+id/cb_clock_popupwindow_select_time_0"
+                            style="@style/MyCheckBoxStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:layout_marginLeft="10dp"
+                            android:onClick="clickCallback"
+                            android:paddingLeft="20dp"
+                            android:text="09:00-10:00" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@drawable/img_divider_gray" />
+
+                        <CheckBox
+                            android:id="@+id/cb_clock_popupwindow_select_time_2"
+                            style="@style/MyCheckBoxStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:layout_marginLeft="10dp"
+                            android:onClick="clickCallback"
+                            android:paddingLeft="20dp"
+                            android:text="11:00-12:00" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@drawable/img_divider_gray" />
+
+                        <CheckBox
+                            android:id="@+id/cb_clock_popupwindow_select_time_4"
+                            style="@style/MyCheckBoxStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:layout_marginLeft="10dp"
+                            android:onClick="clickCallback"
+                            android:paddingLeft="20dp"
+                            android:text="13:00-14:00" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@drawable/img_divider_gray" />
+
+                        <CheckBox
+                            android:id="@+id/cb_clock_popupwindow_select_time_6"
+                            style="@style/MyCheckBoxStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:layout_marginLeft="10dp"
+                            android:onClick="clickCallback"
+                            android:paddingLeft="20dp"
+                            android:text="15:00-16:00" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@drawable/img_divider_gray" />
+
+                        <CheckBox
+                            android:id="@+id/cb_clock_popupwindow_select_time_8"
+                            style="@style/MyCheckBoxStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:onClick="clickCallback"
+                            android:paddingLeft="20dp"
+                            android:text="17:00-18:00" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <CheckBox
+                            android:id="@+id/cb_clock_popupwindow_select_time_1"
+                            style="@style/MyCheckBoxStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:layout_marginLeft="10dp"
+                            android:onClick="clickCallback"
+                            android:paddingLeft="20dp"
+                            android:text="10:00-11:00" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@drawable/img_divider_gray" />
+
+                        <CheckBox
+                            android:id="@+id/cb_clock_popupwindow_select_time_3"
+                            style="@style/MyCheckBoxStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:layout_marginLeft="10dp"
+                            android:onClick="clickCallback"
+                            android:paddingLeft="20dp"
+                            android:text="12:00-13:00" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@drawable/img_divider_gray" />
+
+                        <CheckBox
+                            android:id="@+id/cb_clock_popupwindow_select_time_5"
+                            style="@style/MyCheckBoxStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:layout_marginLeft="10dp"
+                            android:onClick="clickCallback"
+                            android:paddingLeft="20dp"
+                            android:text="14:00-15:00" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@drawable/img_divider_gray" />
+
+                        <CheckBox
+                            android:id="@+id/cb_clock_popupwindow_select_time_7"
+                            style="@style/MyCheckBoxStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:layout_marginLeft="10dp"
+                            android:onClick="clickCallback"
+                            android:paddingLeft="20dp"
+                            android:text="16:00-17:00" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@drawable/img_divider_gray" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/btn_popupwindow_check_all"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_btn_popupwindow_select_time_confirm"
+                        android:onClick="clickCallback"
+                        android:text="@string/check_all"
+                        android:textColor="@drawable/selector_text_color_black_white"
+                        android:textSize="@dimen/text_size_popupwindow_select_time_btn_confirm" />
+
+                    <Button
+                        android:id="@+id/btn_popupwindow_confirm"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_btn_popupwindow_select_time_confirm"
+                        android:onClick="clickCallback"
+                        android:text="@string/confirm"
+                        android:textColor="@drawable/selector_text_color_black_white"
+                        android:textSize="@dimen/text_size_popupwindow_select_time_btn_confirm" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

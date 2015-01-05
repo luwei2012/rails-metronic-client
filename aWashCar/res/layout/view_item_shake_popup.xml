@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="68dp"
+    android:background="@drawable/bg_shake_popup" >
+
+    <ImageView
+        android:id="@+id/img_shake_popup_item_logo"
+        android:layout_width="87dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/unload_image" />
+
+    <TextView
+        android:id="@+id/text_shake_popup_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_shake_popup_item"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/img_shake_popup_item_logo"
+        android:text="成都中宝宝马4S店"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/img_shake_popup_item_discount"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@id/text_shake_popup_item_name"
+        android:layout_marginLeft="@dimen/margin_shake_popup_item"
+        android:layout_toRightOf="@id/text_shake_popup_item_name"
+        android:background="@drawable/img_shake_popup_item_discount" />
+
+    <LinearLayout
+        android:id="@+id/price_linearlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_below="@id/text_shake_popup_item_name"
+        android:layout_marginLeft="@dimen/margin_shake_popup_item"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/img_shake_popup_item_logo"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="大型车："
+            android:textColor="@color/font_white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/no_big_car_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未设置"
+            android:textColor="@color/font_white"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/text_shake_popup_item_big_car_discount_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50"
+            android:textColor="@color/deep_yellow"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/text_shake_popup_item_big_car_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/line"
+            android:text="50"
+            android:textColor="@color/font_gray"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/img_divider_vertical_small" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="小型车："
+            android:textColor="@color/font_white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/no_small_car_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未设置"
+            android:textColor="@color/font_white"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/text_shake_popup_item_small_car_discount_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30"
+            android:textColor="@color/deep_yellow"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/text_shake_popup_item_small_car_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/line"
+            android:text="30"
+            android:textColor="@color/font_gray"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_shake_popup_item_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/price_linearlayout"
+        android:layout_marginLeft="@dimen/margin_shake_popup_item"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/img_shake_popup_item_logo"
+        android:text="地址：武侯区武侯大道"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/text_shake_popup_item_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/text_shake_popup_item_address"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/margin_shake_popup_item_right"
+        android:text="1.2km"
+        android:textSize="12sp" />
+
+</RelativeLayout>

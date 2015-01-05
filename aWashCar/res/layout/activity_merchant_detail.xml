@@ -1,0 +1,286 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@color/activity_title" >
+
+        <ImageView
+            android:id="@+id/btn_merchant_detail_activity_back"
+            android:layout_width="@dimen/title_bar_height"
+            android:layout_height="@dimen/title_bar_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:onClick="clickCallback"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_back_normal" />
+
+        <TextView
+            android:id="@+id/title_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="成都中宝宝马4S店"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/text_size_title_bar_title" />
+
+        <ImageView
+            android:id="@+id/btn_merchant_detail_activity_favourite"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/img_drawer_list_item_favourite_normal"
+            android:onClick="clickCallback" />
+
+        <ImageButton
+            android:id="@+id/btn_merchant_detail_activity_share"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/btn_merchant_detail_activity_favourite"
+            android:background="@drawable/btn_post_normal"
+            android:onClick="clickCallback" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_merchant_detail_activity_order"
+        android:layout_below="@+id/title" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/banner_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.yuyaa.awashcar.widget.MyViewPager
+                    android:id="@+id/vp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/text_merchant_detail_activity_popularity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/mask"
+                    android:gravity="center"
+                    android:text="总订单量：88"
+                    android:textColor="@color/font_white"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/viewpager_dots_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom|"
+                    android:background="#33000000"
+                    android:gravity="center" >
+                </RelativeLayout>
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_white_strip"
+                android:padding="@dimen/margin_merchant_deatal_activity" >
+
+                <TextView
+                    android:id="@+id/text_merchant_detail_activity_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="bottom"
+                    android:text="成都中宝宝马4S店"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/img_merchant_detail_activity_tuan"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignTop="@id/text_merchant_detail_activity_name"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/text_merchant_detail_activity_name"
+                    android:src="@drawable/img_shake_popup_item_discount" />
+
+                <ImageView
+                    android:id="@+id/img_merchant_detail_activity_ding"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignTop="@id/text_merchant_detail_activity_name"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@id/img_merchant_detail_activity_tuan"
+                    android:src="@drawable/img_ding" />
+
+                <LinearLayout
+                    android:id="@+id/layout_merchant_detail_activity_stars"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_merchant_detail_activity_name"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/img_merchant_detail_activity_star0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/img_star_merchant_detail_light" />
+
+                    <ImageView
+                        android:id="@+id/img_merchant_detail_activity_star1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_merchant_detail_star"
+                        android:background="@drawable/img_star_merchant_detail_light" />
+
+                    <ImageView
+                        android:id="@+id/img_merchant_detail_activity_star2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_merchant_detail_star"
+                        android:background="@drawable/img_star_merchant_detail_light" />
+
+                    <ImageView
+                        android:id="@+id/img_merchant_detail_activity_star3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_merchant_detail_star"
+                        android:background="@drawable/img_star_merchant_detail_dark" />
+
+                    <ImageView
+                        android:id="@+id/img_merchant_detail_activity_star4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_merchant_detail_star"
+                        android:background="@drawable/img_star_merchant_detail_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_merchant_detail_activity_big_small_car_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_merchant_detail_activity_stars"
+                    android:layout_marginTop="5dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal"
+                    android:padding="2dp" >
+
+                    <TextView
+                        android:id="@+id/text_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="价格："
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/text_merchant_detail_activity_big_car_discount_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="50"
+                        android:textColor="@color/deep_yellow"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/text_merchant_detail_activity_big_car_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:background="@drawable/line"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:text="50"
+                        android:textColor="@color/font_gray"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/text_merchant_detail_activity_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_merchant_detail_activity_big_small_car_price"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/compose_locatebutton_background_succeeded"
+                    android:clickable="true"
+                    android:onClick="addressOnClick"
+                    android:text="成都市高新区天益街83号"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/text_merchant_detail_activity_tel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_merchant_detail_activity_address"
+                    android:layout_marginTop="5dp"
+                    android:clickable="true"
+                    android:drawableLeft="@drawable/img_tel_hint"
+                    android:gravity="center_vertical"
+                    android:onClick="phoneOnClick"
+                    android:text="028-88888888"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/text_merchant_detail_activity_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/text_merchant_detail_activity_address"
+                    android:layout_alignParentRight="true"
+                    android:text="1.2km"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+            
+             <LinearLayout
+                android:id="@+id/car_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/img_white_strip"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_merchant_deatal_activity" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="服务详情：" />
+
+                <TextView
+                    android:id="@+id/car_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="阿萨德飞进来撒地方进拉萨的减肥阿萨德就发了氨基酸的路口附近啊；多少积分拉开时尽量快放假拉萨的减肥了" />
+            </LinearLayout>
+
+           
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_merchant_detail_activity_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/selector_main_fragment_btn"
+        android:gravity="center"
+        android:onClick="clickCallback"
+        android:text="@string/order"
+        android:textColor="@drawable/selector_text_color_black_white"
+        android:textSize="@dimen/main_btn_text_size" />
+
+</RelativeLayout>
